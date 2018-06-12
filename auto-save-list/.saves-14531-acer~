@@ -1,0 +1,10 @@
+/su:root@acer:/usr/local/nagios/etc/server/test.cfg
+/tmp/#!su:root@acer:!usr!local!nagios!etc!server!test.cfg#
+/su:root@acer:/usr/local/nagios/etc/objects/templates.cfg
+/tmp/#!su:root@acer:!usr!local!nagios!etc!objects!templates.cfg#
+/usr/local/nagios/etc/objects/templates.cfg
+/usr/local/nagios/etc/objects/#templates.cfg#
+/usr/local/nagios/libexec/block_ports.sh
+/usr/local/nagios/libexec/#block_ports.sh#
+/su:root@acer:/usr/local/nagios/etc/objects/commands.cfg
+/tmp/#!su:root@acer:!usr!local!nagios!etc!objects!commands.cfg#

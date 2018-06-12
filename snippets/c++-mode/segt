@@ -1,0 +1,49 @@
+# -*- mode: snippet -*-
+# name: Segment -Tree
+# key: segt
+# --
+class segT{
+  vector<int> ar;
+  int n;
+public:
+  segT(){
+    n = 0;
+  }
+
+  segT(vector<int> a){
+    /* Array must be power of 2*/
+    n = a.size();
+    ar.resize(2 *a.size());
+    for (int i = a.size(); i <= 2 * (int)a.size(); i++) {
+      ar[i] = a[i - a.size()];
+    }
+    for (int i = a.size() - 1; i > 0; i-- ) {
+      ar[i] = ar[i * 2] + ar[i * 2 + 1];
+    }
+  }
+  void print(){
+    for (int i = n; i < ar.size(); i++) {
+      cout << ar[i] << " ";
+    }
+  }
+  int sum(int a, int b){
+    // Quickly find sum ar[a:b]
+    int s = 0;
+    a += n;
+    b += n;
+    while (a <= b) {
+      if(a & 1) s += ar[a++];
+      if(!(b & 1)) s += ar[b--];
+      a /= 2; b /= 2;
+    }
+    return s;
+  }
+  void add(int k, int x){
+    // Increment value at kth index by x
+    k += n;
+    ar[k] += x;
+    for (k /= 2;k <= 1; k /= 2) {
+      ar[k] = ar[2 * k] + ar[2 * k + 1];
+    }
+  }
+};

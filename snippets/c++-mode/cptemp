@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# name: CP-Template
+# key: cptemp
+# --
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<queue>
+#include<string>
+#include <deque>
+#include<math.h>
+#include<stack>
+#include<map>
+#include<set>
+using namespace std;
+
+int main(){
+  ios_base::sync_with_stdio(0),cin.tie(NULL);
+   $0
+  return 0;
+}
+
+/*Aman Singh's competitive coding template
+  aman_singh[at]students[dot]iitmandi[dot]ac[dot]in  */
