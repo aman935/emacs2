@@ -1,27 +1,30 @@
-;; -*- emacs-lisp -*- <18/05/30 23:37:12 /home/aman/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <18/08/18 15:10:09 /home/aman/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-((["su" "root" "acer" nil nil]
-  ("uname" "Linux 4.16.3-301.fc28.x86_64")
+(((tramp-file-name "sudo" "root" nil "acer" nil nil nil)
+  ("uname" "Linux 4.17.12-200.fc28.x86_64")
   ("locale" "LC_ALL=en_US.utf8")
   ("test" "test")
   ("remote-path"
    ("/usr/bin" "/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
   ("remote-shell" "/bin/sh")
-  ("perl-file-spec" t)
-  ("perl-cwd-realpath" t)
-  ("perl" "\\perl")
+  ("~root" "/root")
   ("file-exists" "test -e")
-  ("readlink" "\\readlink")
-  ("stat" nil)
+  ("stat" "env QUOTING_STYLE=locale \\stat")
   ("id" "/usr/bin/id")
   ("gid-integer" 0)
   ("gid-string" "root")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("case-insensitive" nil)
+  ("readlink" "\\readlink")
   ("uid-integer" 0)
+  ("git" "\\git")
   ("ls" "/usr/bin/ls --color=never")
-  ("tmpdir" "/tmp")
-  ("touch-t" t)
-  ("touch" "\\touch")
+  ("ls-quoting-style" t)
   ("ls-dired" t)
-  ("~root" "/root")))
+  ("tmpdir" "/sudo:root@acer:/tmp")
+  ("touch-t" t)
+  ("touch" "\\touch")))

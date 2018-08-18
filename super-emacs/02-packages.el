@@ -34,6 +34,13 @@
 ;;Load default auto-complete configs
 (ac-config-default)
 
+;; Enable c++ mode packages
+(add-hook 'c++-mode-hook
+	  #'electric-operator-mode)
+(add-hook 'c++-mode-hook
+	  #'smartparens-mode)
+(add-hook 'c++-mode-hook
+	  #'flycheck-mode)
 ;;Start undo-tree
 (global-undo-tree-mode)
 
