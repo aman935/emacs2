@@ -5,6 +5,7 @@
 ;;Declare a list of required packages
 (defvar super-emacs--required-packages
   '(helm
+    helm-projectile
     multiple-cursors
     ace-jump-mode
     ace-window
@@ -12,6 +13,7 @@
     powerline
     buffer-move
     auto-complete
+    ggtags
     undo-tree
     dired-launch
     which-key
@@ -20,6 +22,7 @@
     myterminal-controls
     restart-emacs
     yasnippet
+    neotree
     theme-looper))
 
 ;;Install required packages

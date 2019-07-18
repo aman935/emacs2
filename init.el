@@ -31,11 +31,6 @@
 (defvar super-emacs/invokation-time
   (current-time))
 
-(setq url-proxy-services
-   '(("no_proxy" . "^\\(localhost\\|10.*\\)")
-     ("http" . "10.8.0.1:8080")
-     ("https" . "10.8.0.1:8080")))
-
 ;;Load configuration files
 (load-file "~/.emacs.d/super-emacs/00-system.el")
 (load-file "~/.emacs.d/super-emacs/01-repositories.el")
@@ -55,3 +50,11 @@
        (get-buffer-create (current-buffer)))
 (put 'dired-find-alternate-file 'disabled nil)
 (menu-bar-mode 1)
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+              (ggtags-mode 1))))
+(put 'downcase-region 'disabled nil)
+(setq neo-window-fixed-size nil)
+(require 'org-bullets)
+(add-hook 'org-mode-hook 'org-bullets-mode)
